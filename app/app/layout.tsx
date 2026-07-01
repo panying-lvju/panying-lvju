@@ -1,47 +1,26 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "盘鹰旅居 | 稳妥的旅居生活方案",
+    default: "盘鹰旅居",
     template: "%s | 盘鹰旅居",
   },
-  description:
-    "盘鹰旅居，专注旅居生活、基地入住与长期居住方案。页面信息务实清晰，适合咨询、对比和预约沟通。",
-  keywords: [
-    "盘鹰旅居",
-    "旅居",
-    "长期居住",
-    "基地入住",
-    "居住方案",
-    "联络我们",
-  ],
+  description: "盘鹰旅居官方网站，提供基地介绍、居住方案、服务说明与联系方式。",
+  keywords: ["盘鹰旅居", "旅居", "基地介绍", "居住方案", "服务说明", "联系方式"],
   metadataBase: new URL("https://panyinglvju.com"),
   alternates: {
-    canonical: "https://panyinglvju.com",
+    canonical: "/",
   },
   openGraph: {
     title: "盘鹰旅居",
-    description: "稳妥的旅居生活方案",
+    description: "盘鹰旅居官方网站，提供基地介绍、居住方案、服务说明与联系方式。",
     url: "https://panyinglvju.com",
     siteName: "盘鹰旅居",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "盘鹰旅居",
-      },
-    ],
     locale: "zh_CN",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "盘鹰旅居",
-    description: "稳妥的旅居生活方案",
   },
 };
 
@@ -54,7 +33,7 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body>
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
